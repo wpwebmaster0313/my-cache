@@ -3,7 +3,7 @@
  * Plugin Name: My Cache
  * Plugin URI: 
  * Description: A simple caching plugin that just works.
- * Author: Eugene Zheng
+ * Author: wpwebmaster0313
  * Version: 1.0.0
  * Text Domain: my-cache
  * Domain Path: /languages

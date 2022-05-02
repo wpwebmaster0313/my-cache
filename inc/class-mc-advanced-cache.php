@@ -119,6 +119,31 @@ class MC_Advanced_Cache {
 		}
 	}
 
+	/**
+	 * Delete file for clean up
+	 * 
+	 * @since 1.0
+	 * @return bool
+	 */
+	public function clean_up() {
+
+		$file = untrailingslashit( WP_CONTENT_DIR ) . '/advanced-cache.php';
+
+		$ret = true;
+
+		if ( ! @unlink( $file ) ) {
+			$ret = false;
+		}
+
+		$folder = untrailingslashit( WP_CONTENT_DIR ) . '/cache/simple-cache';
+
+		if ( ! @unlink( $folder, true ) ) {
+			$ret = false;
+		}
+
+		return $ret;
+	}
+
 
     /**
      * Return an instance of the current class, create one if it doesn't exist
